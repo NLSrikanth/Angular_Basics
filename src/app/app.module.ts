@@ -21,11 +21,19 @@ import { ContactComponent } from './contact/contact.component';
 
 import { DishService } from './services/dish.service';
 import { LeaderService } from './services/leader.service';
+import { PromotionService } from './services/promotion.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+
+
+import { MatCheckboxModule, MatDatepickerModule, MatFormFieldModule,
+  MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
+  MatSlideToggleModule, MatIconModule, MatProgressSpinnerModule, MatDialogModule } from '@angular/material';
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent,
     MenuComponent,
     DishdetailComponent,
@@ -33,7 +41,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    // MatDialogModule
   ],
   imports: [
     BrowserModule,
@@ -45,9 +55,17 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCheckboxModule, MatDatepickerModule, MatFormFieldModule,
+    MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
+    MatSlideToggleModule,
+    MatIconModule, MatProgressSpinnerModule, MatDialogModule,
+    FormsModule
   ],
-  providers: [DishService, LeaderService],
+  providers: [DishService, PromotionService, LeaderService],
+  entryComponents: [
+    LoginComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
