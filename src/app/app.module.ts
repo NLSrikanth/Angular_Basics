@@ -31,6 +31,7 @@ import { LoginComponent } from './login/login.component';
 import { MatCheckboxModule, MatDatepickerModule, MatFormFieldModule,
   MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
   MatSlideToggleModule, MatIconModule, MatProgressSpinnerModule, MatDialogModule } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [ 
@@ -60,7 +61,8 @@ import { MatCheckboxModule, MatDatepickerModule, MatFormFieldModule,
     MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
     MatSlideToggleModule,
     MatIconModule, MatProgressSpinnerModule, MatDialogModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   entryComponents: [
