@@ -96,7 +96,7 @@ onSubmit() {
     contacttype: 'None',
     message: ''
   });
-  this.feedbackFormDirective.resetForm();
+  // this.feedbackFormDirective.resetForm();
 }
 
 }
