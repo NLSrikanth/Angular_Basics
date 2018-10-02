@@ -53,10 +53,11 @@ comment: Comment;
     }
 
   ngOnInit() {
-    this.dishservice.getDishIds().subscribe(dishIds => this.dishIds = dishIds);
+    this.dishservice.getDishIds().subscribe(dishIds => this.dishIds = dishIds,
+      errMess => this.errMess = `${errMess.status} - ${errMess.statusText}`);
     this.route.params.pipe(switchMap((params: Params) => this.dishservice.getDish(+params['id'])))
     .subscribe(dish => { this.dish = dish; this.setPrevNext(dish.id); },
-    errMess => this.errMess = <any>errMess);
+    errMess => this.errMess = `${errMess.status} - ${errMess.statusText}`);
   }
 
   setPrevNext(dishId: number) {
